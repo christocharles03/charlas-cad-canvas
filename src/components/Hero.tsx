@@ -13,6 +13,50 @@ const Hero = () => {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Animated Network Background */}
+      <div className="absolute inset-0 opacity-20">
+        <svg className="w-full h-full" viewBox="0 0 1920 1080">
+          {/* Network nodes */}
+          {Array.from({ length: 50 }).map((_, i) => (
+            <motion.circle
+              key={i}
+              cx={Math.random() * 1920}
+              cy={Math.random() * 1080}
+              r="2"
+              fill="#3b82f6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
+          
+          {/* Network connections */}
+          {Array.from({ length: 20 }).map((_, i) => (
+            <motion.line
+              key={i}
+              x1={Math.random() * 1920}
+              y1={Math.random() * 1080}
+              x2={Math.random() * 1920}
+              y2={Math.random() * 1080}
+              stroke="#06b6d4"
+              strokeWidth="1"
+              opacity="0.3"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: [0, 1, 0] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                delay: Math.random() * 3,
+              }}
+            />
+          ))}
+        </svg>
+      </div>
+
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
@@ -41,7 +85,7 @@ const Hero = () => {
           >
             <span className="text-blue-400">Christo</span>
             <br />
-            <span className="text-cyan-400">Charlas S</span>
+            <span className="text-cyan-400">Charlas</span>
           </motion.h1>
 
           <motion.div

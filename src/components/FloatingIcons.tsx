@@ -6,13 +6,13 @@ const FloatingIcons = () => {
   const socialLinks = [
     { 
       icon: Linkedin, 
-      href: 'https://linkedin.com', 
+      href: 'https://www.linkedin.com/in/christo-charlas-s', 
       color: '#0077b5',
       label: 'LinkedIn'
     },
     { 
       icon: Github, 
-      href: 'https://github.com', 
+      href: 'https://github.com/christocharlas', 
       color: '#333',
       label: 'GitHub'
     },
@@ -24,7 +24,7 @@ const FloatingIcons = () => {
     },
     { 
       icon: Twitter, 
-      href: 'https://twitter.com', 
+      href: 'https://twitter.com/christocharlas', 
       color: '#1da1f2',
       label: 'Twitter'
     }
