@@ -1,7 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Download, Eye } from 'lucide-react';
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -11,10 +11,23 @@ const Hero = () => {
     }
   };
 
+  const handleDownloadResume = () => {
+    // Replace with actual resume file path
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // You'll need to add your resume file to the public folder
+    link.download = 'Christo_Charlas_Resume.pdf';
+    link.click();
+  };
+
+  const handleViewResume = () => {
+    // Replace with actual resume file path
+    window.open('/resume.pdf', '_blank');
+  };
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Enhanced Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/30 to-cyan-900/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-orange-900/30 to-red-800/20"></div>
 
       <div className="container mx-auto px-6 text-center z-10">
         <motion.div
@@ -28,11 +41,11 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-400 via-orange-400 to-red-500 bg-clip-text text-transparent">
               Christo
             </span>
             <br />
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-400 via-red-400 to-red-600 bg-clip-text text-transparent">
               Charlas
             </span>
           </motion.h1>
@@ -73,13 +86,13 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
           >
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(139, 92, 246, 0.4)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(220, 38, 38, 0.4)" }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToAbout}
-              className="px-8 py-4 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg shadow-purple-500/25"
+              className="px-8 py-4 bg-gradient-to-r from-red-500 via-orange-500 to-red-600 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg shadow-red-500/25"
             >
               Discover My Work
             </motion.button>
@@ -88,9 +101,37 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.open('mailto:christocharly04@gmail.com')}
-              className="px-8 py-4 border-2 border-purple-400 text-purple-300 rounded-full font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              className="px-8 py-4 border-2 border-red-400 text-red-300 rounded-full font-semibold text-lg hover:bg-red-400 hover:text-white transition-all duration-300"
             >
               Get In Touch
+            </motion.button>
+          </motion.div>
+
+          {/* Resume Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 2.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={handleDownloadResume}
+              className="flex items-center gap-2 px-6 py-3 bg-red-600/80 text-white rounded-lg font-medium text-sm hover:bg-red-600 transition-all duration-300 backdrop-blur-sm"
+            >
+              <Download size={18} />
+              Download Resume
+            </motion.button>
+            
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={handleViewResume}
+              className="flex items-center gap-2 px-6 py-3 bg-gray-700/80 text-white rounded-lg font-medium text-sm hover:bg-gray-700 transition-all duration-300 backdrop-blur-sm"
+            >
+              <Eye size={18} />
+              View Resume
             </motion.button>
           </motion.div>
         </motion.div>
@@ -106,7 +147,7 @@ const Hero = () => {
             onClick={scrollToAbout}
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="text-white hover:text-purple-400 transition-colors"
+            className="text-white hover:text-red-400 transition-colors"
           >
             <ChevronDown size={32} />
           </motion.button>

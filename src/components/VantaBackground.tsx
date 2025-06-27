@@ -22,11 +22,11 @@ const VantaBackground = () => {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0x3b82f6, // Blue color
-        backgroundColor: 0x0f172a, // Dark slate background
-        points: 10.00,
-        maxDistance: 20.00,
-        spacing: 18.00
+        color: 0xdc2626, // AutoCAD Red color
+        backgroundColor: 0x1a1a1a, // Dark background
+        points: 8.00,
+        maxDistance: 25.00,
+        spacing: 20.00
       });
     }
 

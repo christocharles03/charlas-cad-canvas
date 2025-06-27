@@ -38,7 +38,7 @@ const Index = () => {
 
   return (
     <ScrollProvider>
-      <div className={`min-h-screen transition-colors duration-500 ${darkMode ? 'dark' : ''}`}>
+      <div className={`min-h-screen transition-colors duration-500 ${darkMode ? 'dark' : ''} autocad-cursor`}>
         <AnimatePresence>
           {loading && <Preloader />}
         </AnimatePresence>
@@ -51,7 +51,7 @@ const Index = () => {
             className="relative min-h-screen"
           >
             <VantaBackground />
-            <div className="relative z-10 bg-gradient-to-br from-slate-900/80 via-purple-900/40 to-slate-800/80 dark:from-gray-900/60 dark:via-slate-900/40 dark:to-black/60 min-h-screen backdrop-blur-sm">
+            <div className="relative z-10 bg-gradient-to-br from-gray-900/90 via-red-900/30 to-gray-800/90 dark:from-gray-900/80 dark:via-red-900/20 dark:to-black/80 min-h-screen backdrop-blur-sm autocad-grid">
               <Header darkMode={darkMode} setDarkMode={setDarkMode} />
               <Hero />
               <About />
