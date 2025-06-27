@@ -13,63 +13,8 @@ const Hero = () => {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Network Background */}
-      <div className="absolute inset-0 opacity-20">
-        <svg className="w-full h-full" viewBox="0 0 1920 1080">
-          {/* Network nodes */}
-          {Array.from({ length: 50 }).map((_, i) => (
-            <motion.circle
-              key={i}
-              cx={Math.random() * 1920}
-              cy={Math.random() * 1080}
-              r="2"
-              fill="#3b82f6"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 0] }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-              }}
-            />
-          ))}
-          
-          {/* Network connections */}
-          {Array.from({ length: 20 }).map((_, i) => (
-            <motion.line
-              key={i}
-              x1={Math.random() * 1920}
-              y1={Math.random() * 1080}
-              x2={Math.random() * 1920}
-              y2={Math.random() * 1080}
-              stroke="#06b6d4"
-              strokeWidth="1"
-              opacity="0.3"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: [0, 1, 0] }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                delay: Math.random() * 3,
-              }}
-            />
-          ))}
-        </svg>
-      </div>
-
-      {/* Animated Background */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-cyan-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
-
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="w-full h-full" style={{
-          backgroundImage: 'radial-gradient(circle, #60a5fa 1px, transparent 1px)',
-          backgroundSize: '50px 50px'
-        }}></div>
-      </div>
+      {/* Enhanced Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/30 to-cyan-900/20"></div>
 
       <div className="container mx-auto px-6 text-center z-10">
         <motion.div
@@ -83,16 +28,20 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <span className="text-blue-400">Christo</span>
+            <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Christo
+            </span>
             <br />
-            <span className="text-cyan-400">Charlas</span>
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Charlas
+            </span>
           </motion.h1>
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="text-xl md:text-2xl text-slate-300 mb-8 h-16"
+            className="text-xl md:text-2xl text-slate-200 mb-8 h-16"
           >
             <Typewriter
               words={[
@@ -114,7 +63,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.5 }}
-            className="text-lg text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed"
           >
             Passionate about creating innovative engineering solutions through advanced CAD/REVIT MEP design. 
             Combining technical expertise with creative problem-solving to build the future of engineering.
@@ -127,10 +76,10 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(139, 92, 246, 0.4)" }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToAbout}
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg"
+              className="px-8 py-4 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg shadow-purple-500/25"
             >
               Discover My Work
             </motion.button>
@@ -139,7 +88,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.open('mailto:christocharly04@gmail.com')}
-              className="px-8 py-4 border-2 border-blue-400 text-blue-400 rounded-full font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
+              className="px-8 py-4 border-2 border-purple-400 text-purple-300 rounded-full font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
             >
               Get In Touch
             </motion.button>
@@ -157,7 +106,7 @@ const Hero = () => {
             onClick={scrollToAbout}
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="text-white hover:text-blue-400 transition-colors"
+            className="text-white hover:text-purple-400 transition-colors"
           >
             <ChevronDown size={32} />
           </motion.button>

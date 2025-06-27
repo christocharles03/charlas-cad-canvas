@@ -44,7 +44,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
       transition={{ duration: 0.8 }}
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50' 
+          ? 'bg-slate-900/80 backdrop-blur-md border-b border-purple-500/30' 
           : 'bg-transparent'
       }`}
     >
@@ -55,8 +55,8 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold text-white"
           >
-            <span className="text-blue-400">Christo</span>
-            <span className="text-cyan-400">.</span>
+            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Christo</span>
+            <span className="text-purple-400">.</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -70,7 +70,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
                 className="text-slate-300 hover:text-white transition-colors relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-cyan-400 transition-all group-hover:w-full"></span>
               </motion.button>
             ))}
             
@@ -79,7 +79,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full bg-slate-800 text-blue-400 hover:bg-slate-700 hover:text-cyan-400 transition-colors"
+              className="p-2 rounded-full bg-slate-800 text-purple-400 hover:bg-slate-700 hover:text-cyan-400 transition-colors"
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </motion.button>
@@ -91,7 +91,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full bg-slate-800 text-blue-400 hover:text-cyan-400 transition-colors"
+              className="p-2 rounded-full bg-slate-800 text-purple-400 hover:text-cyan-400 transition-colors"
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </motion.button>

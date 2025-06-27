@@ -13,6 +13,7 @@ import Experience from '../components/Experience';
 import Contact from '../components/Contact';
 import Preloader from '../components/Preloader';
 import FloatingIcons from '../components/FloatingIcons';
+import VantaBackground from '../components/VantaBackground';
 import { ScrollProvider } from '../contexts/ScrollContext';
 
 const Index = () => {
@@ -47,17 +48,20 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 dark:from-gray-900 dark:via-slate-900 dark:to-black min-h-screen"
+            className="relative min-h-screen"
           >
-            <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-            <Hero />
-            <About />
-            <Education />
-            <Skills />
-            <Projects />
-            <Experience />
-            <Contact />
-            <FloatingIcons />
+            <VantaBackground />
+            <div className="relative z-10 bg-gradient-to-br from-slate-900/80 via-purple-900/40 to-slate-800/80 dark:from-gray-900/60 dark:via-slate-900/40 dark:to-black/60 min-h-screen backdrop-blur-sm">
+              <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+              <Hero />
+              <About />
+              <Education />
+              <Skills />
+              <Projects />
+              <Experience />
+              <Contact />
+              <FloatingIcons />
+            </div>
           </motion.div>
         )}
       </div>
