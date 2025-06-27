@@ -22,8 +22,8 @@ const VantaBackground = () => {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0xdc2626, // AutoCAD Red color
-        backgroundColor: 0x1a1a1a, // Dark background
+        color: 0x06b6d4, // Cyan color for modern tech feel
+        backgroundColor: 0xf8fafc, // Light background
         points: 8.00,
         maxDistance: 25.00,
         spacing: 20.00

@@ -93,7 +93,6 @@
 
   body {
     @apply bg-background text-foreground;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2" fill="%23dc2626"/><path d="M12 2v4M12 18v4M22 12h-4M6 12H2" stroke="%23dc2626" stroke-width="1" stroke-linecap="round"/></svg>') 12 12, crosshair;
   }
 
   html {
@@ -104,14 +103,32 @@
     overflow-x: hidden;
   }
 
-  /* Custom AutoCAD-style cursor */
-  .autocad-cursor {
+  /* Custom AutoCAD-style cursor for light mode */
+  body:not(.dark) {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="1.5" fill="%23dc2626"/><path d="M10 1v3M10 16v3M19 10h-3M4 10H1" stroke="%23dc2626" stroke-width="1" stroke-linecap="round"/></svg>') 10 10, crosshair;
   }
 
-  /* Interactive elements cursor */
-  button, a, input, textarea, select {
+  /* Custom AutoCAD-style cursor for dark mode */
+  body.dark {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="1.5" fill="%2306b6d4"/><path d="M10 1v3M10 16v3M19 10h-3M4 10H1" stroke="%2306b6d4" stroke-width="1" stroke-linecap="round"/></svg>') 10 10, crosshair;
+  }
+
+  /* Interactive elements cursor - light mode */
+  body:not(.dark) button, 
+  body:not(.dark) a, 
+  body:not(.dark) input, 
+  body:not(.dark) textarea, 
+  body:not(.dark) select {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,2 18,10 10,18 2,10" fill="none" stroke="%23dc2626" stroke-width="1.5"/><circle cx="10" cy="10" r="2" fill="%23dc2626"/></svg>') 10 10, pointer;
+  }
+
+  /* Interactive elements cursor - dark mode */
+  body.dark button, 
+  body.dark a, 
+  body.dark input, 
+  body.dark textarea, 
+  body.dark select {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,2 18,10 10,18 2,10" fill="none" stroke="%2306b6d4" stroke-width="1.5"/><circle cx="10" cy="10" r="2" fill="%2306b6d4"/></svg>') 10 10, pointer;
   }
 }
 
@@ -131,35 +148,53 @@
   }
 
   .glass-effect {
-    background: rgba(220, 38, 38, 0.05);
+    background: rgba(6, 182, 212, 0.05);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(220, 38, 38, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.1);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #dc2626, #ef4444);
+    background: linear-gradient(135deg, #06b6d4, #0ea5e9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 }
 
-/* Custom Scrollbar - AutoCAD Red Theme */
-::-webkit-scrollbar {
+/* Custom Scrollbar - light mode */
+body:not(.dark) ::-webkit-scrollbar {
   width: 8px;
 }
 
-::-webkit-scrollbar-track {
-  background: #1e1e1e;
+body:not(.dark) ::-webkit-scrollbar-track {
+  background: #f1f5f9;
 }
 
-::-webkit-scrollbar-thumb {
+body:not(.dark) ::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #dc2626, #ef4444);
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+body:not(.dark) ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #b91c1c, #dc2626);
+}
+
+/* Custom Scrollbar - dark mode */
+body.dark ::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+  border-radius: 4px;
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0891b2, #0284c7);
 }
 
 /* Custom Animations */
@@ -202,10 +237,18 @@
   51%, 100% { opacity: 0; }
 }
 
-/* AutoCAD-style grid pattern */
-.autocad-grid {
+/* AutoCAD-style grid pattern - light mode */
+body:not(.dark) .autocad-grid {
   background-image: 
     linear-gradient(rgba(220, 38, 38, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(220, 38, 38, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* AutoCAD-style grid pattern - dark mode */
+body.dark .autocad-grid {
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
 }

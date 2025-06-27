@@ -31,14 +31,16 @@ const Index = () => {
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
+      document.body.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
+      document.body.classList.remove('dark');
     }
   }, [darkMode]);
 
   return (
     <ScrollProvider>
-      <div className={`min-h-screen transition-colors duration-500 ${darkMode ? 'dark' : ''} autocad-cursor`}>
+      <div className={`min-h-screen transition-colors duration-500 ${darkMode ? 'dark' : ''}`}>
         <AnimatePresence>
           {loading && <Preloader />}
         </AnimatePresence>
@@ -51,7 +53,7 @@ const Index = () => {
             className="relative min-h-screen"
           >
             <VantaBackground />
-            <div className="relative z-10 bg-gradient-to-br from-gray-900/90 via-red-900/30 to-gray-800/90 dark:from-gray-900/80 dark:via-red-900/20 dark:to-black/80 min-h-screen backdrop-blur-sm autocad-grid">
+            <div className="relative z-10 bg-gradient-to-br from-white/90 via-slate-50/80 to-gray-100/90 dark:from-gray-900/90 dark:via-slate-800/30 dark:to-gray-800/90 min-h-screen backdrop-blur-sm autocad-grid">
               <Header darkMode={darkMode} setDarkMode={setDarkMode} />
               <Hero />
               <About />
