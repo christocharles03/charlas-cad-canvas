@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Enhanced Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-red-100/20 via-orange-100/30 to-red-50/20 dark:from-cyan-900/20 dark:via-blue-900/30 dark:to-cyan-800/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-100/20 via-teal-100/30 to-green-50/20 dark:from-purple-900/20 dark:via-indigo-900/30 dark:to-purple-800/20"></div>
 
       <div className="container mx-auto px-6 text-center z-10">
         <motion.div
@@ -41,11 +41,11 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <span className="bg-gradient-to-r from-red-500 via-orange-500 to-red-600 dark:from-cyan-400 dark:via-blue-400 dark:to-cyan-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-emerald-500 via-teal-500 to-green-600 dark:from-purple-400 dark:via-pink-400 dark:to-purple-500 bg-clip-text text-transparent">
               Christo
             </span>
             <br />
-            <span className="bg-gradient-to-r from-orange-500 via-red-500 to-red-700 dark:from-blue-400 dark:via-cyan-400 dark:to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-teal-500 via-emerald-500 to-green-700 dark:from-pink-400 dark:via-purple-400 dark:to-indigo-600 bg-clip-text text-transparent">
               Charlas
             </span>
           </motion.h1>
@@ -89,10 +89,10 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
           >
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(220, 38, 38, 0.4)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(16, 185, 129, 0.4)" }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToAbout}
-              className="px-8 py-4 bg-gradient-to-r from-red-500 via-orange-500 to-red-600 dark:from-cyan-500 dark:via-blue-500 dark:to-cyan-600 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg shadow-red-500/25 dark:shadow-cyan-500/25"
+              className="px-8 py-4 bg-gradient-to-r from-emerald-500 via-teal-500 to-green-600 dark:from-purple-500 dark:via-pink-500 dark:to-purple-600 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg shadow-emerald-500/25 dark:shadow-purple-500/25"
             >
               Discover My Work
             </motion.button>
@@ -101,7 +101,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.open('mailto:christocharly04@gmail.com')}
-              className="px-8 py-4 border-2 border-red-500 dark:border-cyan-400 text-red-600 dark:text-cyan-300 rounded-full font-semibold text-lg hover:bg-red-500 dark:hover:bg-cyan-400 hover:text-white dark:hover:text-gray-900 transition-all duration-300"
+              className="px-8 py-4 border-2 border-emerald-500 dark:border-purple-400 text-emerald-600 dark:text-purple-300 rounded-full font-semibold text-lg hover:bg-emerald-500 dark:hover:bg-purple-400 hover:text-white dark:hover:text-gray-900 transition-all duration-300"
             >
               Get In Touch
             </motion.button>
@@ -118,7 +118,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleDownloadResume}
-              className="flex items-center gap-2 px-6 py-3 bg-red-600/80 dark:bg-cyan-600/80 text-white rounded-lg font-medium text-sm hover:bg-red-600 dark:hover:bg-cyan-600 transition-all duration-300 backdrop-blur-sm"
+              className="flex items-center gap-2 px-6 py-3 bg-emerald-600/80 dark:bg-purple-600/80 text-white rounded-lg font-medium text-sm hover:bg-emerald-600 dark:hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm"
             >
               <Download size={18} />
               Download Resume
@@ -147,7 +147,7 @@ const Hero = () => {
             onClick={scrollToAbout}
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="text-gray-600 dark:text-white hover:text-red-500 dark:hover:text-cyan-400 transition-colors"
+            className="text-gray-600 dark:text-white hover:text-emerald-500 dark:hover:text-purple-400 transition-colors"
           >
             <ChevronDown size={32} />
           </motion.button>

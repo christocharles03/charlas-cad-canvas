@@ -53,7 +53,7 @@ const Index = () => {
             className="relative min-h-screen"
           >
             <VantaBackground />
-            <div className="relative z-10 bg-gradient-to-br from-white/90 via-slate-50/80 to-gray-100/90 dark:from-gray-900/90 dark:via-slate-800/30 dark:to-gray-800/90 min-h-screen backdrop-blur-sm autocad-grid">
+            <div className="relative z-10 bg-gradient-to-br from-white/90 via-emerald-50/80 to-green-100/90 dark:from-gray-900/90 dark:via-purple-900/30 dark:to-indigo-900/90 min-h-screen backdrop-blur-sm autocad-grid">
               <Header darkMode={darkMode} setDarkMode={setDarkMode} />
               <Hero />
               <About />
