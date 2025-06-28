@@ -103,14 +103,14 @@
     overflow-x: hidden;
   }
 
-  /* Custom AutoCAD-style cursor for light mode */
+  /* Custom cursor for light mode - using teal color */
   body:not(.dark) {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="1.5" fill="%2310b981"/><path d="M10 1v3M10 16v3M19 10h-3M4 10H1" stroke="%2310b981" stroke-width="1" stroke-linecap="round"/></svg>') 10 10, crosshair;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="1.5" fill="%23124E66"/><path d="M10 1v3M10 16v3M19 10h-3M4 10H1" stroke="%23124E66" stroke-width="1" stroke-linecap="round"/></svg>') 10 10, crosshair;
   }
 
-  /* Custom AutoCAD-style cursor for dark mode */
+  /* Custom cursor for dark mode - using light blue */
   body.dark {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="1.5" fill="%23a855f7"/><path d="M10 1v3M10 16v3M19 10h-3M4 10H1" stroke="%23a855f7" stroke-width="1" stroke-linecap="round"/></svg>') 10 10, crosshair;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="1.5" fill="%23748D92"/><path d="M10 1v3M10 16v3M19 10h-3M4 10H1" stroke="%23748D92" stroke-width="1" stroke-linecap="round"/></svg>') 10 10, crosshair;
   }
 
   /* Interactive elements cursor - light mode */
@@ -119,7 +119,7 @@
   body:not(.dark) input, 
   body:not(.dark) textarea, 
   body:not(.dark) select {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,2 18,10 10,18 2,10" fill="none" stroke="%2310b981" stroke-width="1.5"/><circle cx="10" cy="10" r="2" fill="%2310b981"/></svg>') 10 10, pointer;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,2 18,10 10,18 2,10" fill="none" stroke="%23124E66" stroke-width="1.5"/><circle cx="10" cy="10" r="2" fill="%23124E66"/></svg>') 10 10, pointer;
   }
 
   /* Interactive elements cursor - dark mode */
@@ -128,7 +128,7 @@
   body.dark input, 
   body.dark textarea, 
   body.dark select {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,2 18,10 10,18 2,10" fill="none" stroke="%23a855f7" stroke-width="1.5"/><circle cx="10" cy="10" r="2" fill="%23a855f7"/></svg>') 10 10, pointer;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,2 18,10 10,18 2,10" fill="none" stroke="%23748D92" stroke-width="1.5"/><circle cx="10" cy="10" r="2" fill="%23748D92"/></svg>') 10 10, pointer;
   }
 }
 
@@ -148,13 +148,13 @@
   }
 
   .glass-effect {
-    background: rgba(16, 185, 129, 0.05);
+    background: rgba(18, 78, 102, 0.05);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(18, 78, 102, 0.1);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #10b981, #06d6a0);
+    background: linear-gradient(135deg, #124E66, #2E3944);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -167,16 +167,16 @@ body:not(.dark) ::-webkit-scrollbar {
 }
 
 body:not(.dark) ::-webkit-scrollbar-track {
-  background: #f0fdf4;
+  background: #D3D9D4;
 }
 
 body:not(.dark) ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: linear-gradient(135deg, #124E66, #2E3944);
   border-radius: 4px;
 }
 
 body:not(.dark) ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #059669, #047857);
+  background: linear-gradient(135deg, #2E3944, #748D92);
 }
 
 /* Custom Scrollbar - dark mode */
@@ -185,16 +185,16 @@ body.dark ::-webkit-scrollbar {
 }
 
 body.dark ::-webkit-scrollbar-track {
-  background: #1e1b4b;
+  background: #212A31;
 }
 
 body.dark ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #a855f7, #9333ea);
+  background: linear-gradient(135deg, #748D92, #2E3944);
   border-radius: 4px;
 }
 
 body.dark ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #9333ea, #7c3aed);
+  background: linear-gradient(135deg, #2E3944, #124E66);
 }
 
 /* Custom Animations */
@@ -237,18 +237,18 @@ body.dark ::-webkit-scrollbar-thumb:hover {
   51%, 100% { opacity: 0; }
 }
 
-/* AutoCAD-style grid pattern - light mode */
+/* Grid pattern - light mode */
 body:not(.dark) .autocad-grid {
   background-image: 
-    linear-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 185, 129, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(18, 78, 102, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 78, 102, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
-/* AutoCAD-style grid pattern - dark mode */
+/* Grid pattern - dark mode */
 body.dark .autocad-grid {
   background-image: 
-    linear-gradient(rgba(168, 85, 247, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(116, 141, 146, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(116, 141, 146, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
 }

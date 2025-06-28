@@ -44,7 +44,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
       transition={{ duration: 0.8 }}
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-emerald-500/30 dark:border-purple-400/30' 
+          ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-sky-500/30 dark:border-slate-600/30' 
           : 'bg-transparent'
       }`}
     >
@@ -55,8 +55,8 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold"
           >
-            <span className="bg-gradient-to-r from-emerald-500 to-teal-500 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">Christo</span>
-            <span className="text-emerald-500 dark:text-purple-400">.</span>
+            <span className="bg-gradient-to-r from-slate-700 to-slate-900 dark:from-slate-300 dark:to-slate-400 bg-clip-text text-transparent">Christo</span>
+            <span className="text-sky-600 dark:text-slate-400">.</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -67,10 +67,10 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
                 onClick={() => scrollToSection(item.href)}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="text-gray-700 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-purple-400 transition-colors relative group"
+                className="text-gray-700 dark:text-slate-300 hover:text-sky-600 dark:hover:text-slate-400 transition-colors relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 dark:from-purple-400 dark:to-pink-400 transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-sky-600 to-slate-700 dark:from-slate-400 dark:to-slate-300 transition-all group-hover:w-full"></span>
               </motion.button>
             ))}
             
@@ -79,7 +79,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-emerald-500 dark:text-purple-400 hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-teal-500 dark:hover:text-pink-400 transition-colors"
+              className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-sky-600 dark:text-slate-400 hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </motion.button>
@@ -91,7 +91,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-emerald-500 dark:text-purple-400 hover:text-teal-500 dark:hover:text-pink-400 transition-colors"
+              className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-sky-600 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </motion.button>
@@ -123,7 +123,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left py-3 text-gray-700 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-purple-400 transition-colors"
+                  className="block w-full text-left py-3 text-gray-700 dark:text-slate-300 hover:text-sky-600 dark:hover:text-slate-400 transition-colors"
                 >
                   {item.name}
                 </motion.button>

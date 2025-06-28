@@ -22,8 +22,8 @@ const VantaBackground = () => {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0x10b981, // Emerald color for modern tech feel
-        backgroundColor: 0xf8fafc, // Light background
+        color: 0x124E66, // Deep teal from the image palette
+        backgroundColor: 0xD3D9D4, // Light gray background
         points: 8.00,
         maxDistance: 25.00,
         spacing: 20.00
