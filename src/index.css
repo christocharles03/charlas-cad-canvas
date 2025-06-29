@@ -252,3 +252,11 @@ body.dark .autocad-grid {
     linear-gradient(90deg, rgba(116, 141, 146, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
 }
+
+/* AutoCAD grid pattern for preloader */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(116, 141, 146, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(116, 141, 146, 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
