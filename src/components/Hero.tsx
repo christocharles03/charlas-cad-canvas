@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import { ChevronDown, Download, Eye } from 'lucide-react';
@@ -12,16 +11,14 @@ const Hero = () => {
   };
 
   const handleDownloadResume = () => {
-    // Replace with actual resume file path
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // You'll need to add your resume file to the public folder
-    link.download = 'Christo_Charlas_Resume.pdf';
+    link.href = '/lovable-uploads/7d943b4f-9b17-45fe-95ce-b442bcaef992.png';
+    link.download = 'Christo_Charles_CV.png';
     link.click();
   };
 
   const handleViewResume = () => {
-    // Replace with actual resume file path
-    window.open('/resume.pdf', '_blank');
+    window.open('/lovable-uploads/7d943b4f-9b17-45fe-95ce-b442bcaef992.png', '_blank');
   };
 
   return (
@@ -121,7 +118,7 @@ const Hero = () => {
               className="flex items-center gap-2 px-6 py-3 bg-slate-700/80 dark:bg-slate-600/80 text-white rounded-lg font-medium text-sm hover:bg-slate-700 dark:hover:bg-slate-600 transition-all duration-300 backdrop-blur-sm"
             >
               <Download size={18} />
-              Download Resume
+              Download CV
             </motion.button>
             
             <motion.button
@@ -131,7 +128,7 @@ const Hero = () => {
               className="flex items-center gap-2 px-6 py-3 bg-gray-600/80 dark:bg-gray-700/80 text-white rounded-lg font-medium text-sm hover:bg-gray-600 dark:hover:bg-gray-700 transition-all duration-300 backdrop-blur-sm"
             >
               <Eye size={18} />
-              View Resume
+              View CV
             </motion.button>
           </motion.div>
         </motion.div>
