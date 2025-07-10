@@ -58,9 +58,16 @@ const Header = ({
           {/* Logo */}
           <motion.div whileHover={{
           scale: 1.05
-        }} className="text-2xl font-bold">
-            <span className="bg-gradient-to-r from-slate-700 to-slate-900 dark:from-slate-300 dark:to-slate-400 bg-clip-text text-transparent">Christo</span>
-            <span className="text-sky-600 dark:text-slate-400">.</span>
+        }} className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/32983248-f8f0-4d13-b8c0-55a5f1a79adc.png" 
+              alt="Christo Charlas" 
+              className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-sky-600/50"
+            />
+            <div className="text-2xl font-bold">
+              <span className="bg-gradient-to-r from-slate-700 to-slate-900 dark:from-slate-300 dark:to-slate-400 bg-clip-text text-transparent">Christo</span>
+              <span className="text-sky-600 dark:text-slate-400">.</span>
+            </div>
           </motion.div>
 
           {/* Desktop Navigation */}
