@@ -34,6 +34,20 @@ const Hero = () => {
         duration: 1,
         delay: 0.2
       }}>
+          {/* Professional Profile Image */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mb-8"
+          >
+            <img 
+              src="/lovable-uploads/d5651d0d-cde0-47c4-aa17-b8ffe2c6cdb4.png" 
+              alt="Christo Charlas" 
+              className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover border-4 border-sky-600/50 shadow-lg shadow-sky-600/25"
+            />
+          </motion.div>
+
           <motion.h1 className="text-5xl md:text-7xl font-bold text-gray-800 dark:text-white mb-6" initial={{
           opacity: 0,
           scale: 0.5

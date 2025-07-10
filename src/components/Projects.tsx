@@ -20,7 +20,7 @@ const Projects = () => {
       year: "2025",
       description: "Advanced UAV system designed for precision agricultural irrigation, incorporating smart sensors and automated control systems.",
       technologies: ["UAV Design", "Sensor Integration", "Automation", "Agricultural Tech"],
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&h=600&fit=crop",
+      image: "/lovable-uploads/ad630839-3a28-417a-bcd0-a183339b54a7.png",
       details: "This project focuses on developing an autonomous UAV system for agricultural irrigation management. The system incorporates advanced sensors for soil moisture detection, weather monitoring, and crop health assessment. The UAV is equipped with precision irrigation equipment and utilizes AI algorithms for optimal water distribution patterns.",
       achievements: ["Improved irrigation efficiency by 40%", "Reduced water wastage by 35%", "Automated crop monitoring system"]
     },
@@ -31,7 +31,7 @@ const Projects = () => {
       year: "2022",
       description: "Innovative military vehicle design incorporating advanced armor systems and next-generation propulsion technology.",
       technologies: ["CAD Design", "Armor Systems", "Propulsion", "Military Engineering"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
+      image: "/lovable-uploads/a4a2c6a2-9cdc-4d70-b87c-92729a3535d7.png",
       details: "This project involved designing a next-generation military tank with enhanced protection systems, improved mobility, and advanced weapon systems. The design incorporates lightweight composite materials, reactive armor systems, and hybrid propulsion technology for better fuel efficiency and reduced environmental impact.",
       achievements: ["30% weight reduction", "Enhanced armor protection", "Improved fuel efficiency by 25%"]
     }
