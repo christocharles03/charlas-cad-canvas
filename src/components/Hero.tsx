@@ -50,7 +50,7 @@ const Hero = () => {
             </span>
             <br />
             <span className="bg-gradient-to-r from-sky-600 via-slate-700 to-slate-900 dark:from-slate-400 dark:via-slate-300 dark:to-slate-100 bg-clip-text text-transparent">
-              Charlas
+              Charles
             </span>
           </motion.h1>
 
