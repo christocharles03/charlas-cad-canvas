@@ -55,18 +55,12 @@ const Header = ({
   }} className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-sky-500/30 dark:border-slate-600/30' : 'bg-transparent'}`}>
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* CC Logo */}
           <motion.div whileHover={{
           scale: 1.05
-        }} className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/32983248-f8f0-4d13-b8c0-55a5f1a79adc.png" 
-              alt="Christo Charlas" 
-              className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-sky-600/50"
-            />
-            <div className="text-2xl font-bold">
-              <span className="bg-gradient-to-r from-slate-700 to-slate-900 dark:from-slate-300 dark:to-slate-400 bg-clip-text text-transparent">Christo</span>
-              <span className="text-sky-600 dark:text-slate-400">.</span>
+        }} className="flex items-center">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-sky-600 to-slate-700 dark:from-slate-400 dark:to-slate-600 rounded-lg flex items-center justify-center shadow-lg">
+              <span className="text-white dark:text-slate-900 font-bold text-lg md:text-xl">CC</span>
             </div>
           </motion.div>
 
